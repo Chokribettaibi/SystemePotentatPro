@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: potentat-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_secure_pass
+      MYSQL_DATABASE: potentat_db
+      MYSQL_USER: potentat_user
+      MYSQL_PASSWORD: potentat_secure_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: potentat-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      JWT_SECRET: potentat_pro_secret_key_2026_enterprise_pos
+      JWT_EXPIRES_IN: 24h
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: potentat_user
+      DB_PASSWORD: potentat_secure_pass
+      DB_NAME: potentat_db
+      NODE_ENV: production
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: potentat-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5000/api
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
