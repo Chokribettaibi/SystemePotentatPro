@@ -1,4 +1,5 @@
 {
+  "root": "backend",
   "name": "potentat-pro-backend",
   "version": "1.0.0",
   "description": "Enterprise-grade backend for Potentat Pro POS & Inventory System",
