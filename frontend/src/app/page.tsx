@@ -47,14 +47,22 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 0039a80 (chore: include frontend files (convert submodule to tracked folder))
       {/* Background Neon Blur Elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Container */}
       <div className="w-full max-w-md z-10">
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 0039a80 (chore: include frontend files (convert submodule to tracked folder))
         {/* Logo */}
         <div className="text-center mb-8 flex flex-col items-center">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-400 to-indigo-600 flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.5)] mb-3 border border-cyan-300/20">
@@ -66,7 +74,11 @@ export default function LoginPage() {
 
         {/* Glassmorphic Form Card */}
         <div className="glass-panel p-8 border border-sky-900/35 relative">
+<<<<<<< HEAD
           
+=======
+
+>>>>>>> 0039a80 (chore: include frontend files (convert submodule to tracked folder))
           {/* Card subtle scanline effect */}
           <div className="absolute inset-0 rounded-3xl bg-[linear-gradient(rgba(18,24,64,0.03)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_4px] pointer-events-none" />
 

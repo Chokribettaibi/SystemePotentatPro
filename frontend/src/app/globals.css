@@ -1,14 +1,13 @@
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --background: #060919;
   --foreground: #f8fafc;
-  --font-outfit: 'Outfit', sans-serif;
+  --font-outfit: "Outfit", sans-serif;
   --glass-bg: rgba(10, 16, 42, 0.65);
   --glass-border: rgba(56, 189, 248, 0.15);
-  --neon-blue: #00F2FE;
+  --neon-blue: #00f2fe;
   --neon-glow: 0 0 15px rgba(0, 242, 254, 0.4);
 }
 
@@ -19,7 +18,7 @@
 
 body {
   background-color: var(--background);
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(16, 38, 92, 0.3) 0px, transparent 50%),
     radial-gradient(at 50% 0%, rgba(3, 105, 161, 0.15) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.95) 0px, transparent 50%);
@@ -86,13 +85,14 @@ body {
 }
 
 .neon-border-active {
-  border-color: #00F2FE;
+  border-color: #00f2fe;
   box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
 }
 
 /* Custom Animations */
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.4;
   }
   50% {
